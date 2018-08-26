@@ -4,9 +4,9 @@ x-collection-name: Box
 x-complete: 0
 info:
   title: Box Get Collaboration
-  description: "Used to get information about a single collaboration. All collaborations
+  description: Used to get information about a single collaboration. All collaborations
     for a single folder can be retrieved through GET /folders/{id}/collaborations.
-    A complete list of the user\u2019s pending collaborations can also be retrieved."
+    A complete list of the user???s pending collaborations can also be retrieved.
   version: 1.0.0
 host: api.box.com
 basePath: /2.0
@@ -113,9 +113,9 @@ paths:
   /collaborations/{COLLAB_ID}:
     get:
       summary: Get Collaboration
-      description: "Used to get information about a single collaboration. All collaborations
+      description: Used to get information about a single collaboration. All collaborations
         for a single folder can be retrieved through GET /folders/{id}/collaborations.
-        A complete list of the user\u2019s pending collaborations can also be retrieved."
+        A complete list of the user???s pending collaborations can also be retrieved.
       operationId: getCollaboration
       x-api-path-slug: collaborationscollab-id-get
       parameters:
