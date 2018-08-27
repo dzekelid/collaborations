@@ -1,8 +1,11 @@
+---
 swagger: "2.0"
 x-collection-name: Box
-x-complete: 1
+x-complete: 0
 info:
-  title: Box
+  title: Box Update Collaboration
+  description: Used to edit an existing collaboration. Descriptions of the various
+    roles can be found here.
   version: 1.0.0
 host: api.box.com
 basePath: /2.0
@@ -150,46 +153,17 @@ paths:
       - Documents
       - Collaborations
       - Collab
-    delete:
-      summary: Delete Collaboration
-      description: Used to delete a single collaboration.
-      operationId: deleteCollaboration
-      x-api-path-slug: collaborationscollab-id-delete
-      parameters:
-      - in: path
-        name: COLLAB_ID
-      responses:
-        200:
-          description: OK
-      tags:
-      - Documents
-      - Collaborations
-      - Collab
-  /groups/{GROUP_ID}/collaborations:
-    get:
-      summary: Get Collaborations for Group
-      description: Retrieves all of the group collaborations for a given group. Note
-        this is only available to group admins.
-      operationId: getGroupCollaborations
-      x-api-path-slug: groupsgroup-idcollaborations-get
-      parameters:
-      - in: query
-        name: fields
-        description: Attribute(s) to include in the response
-      - in: path
-        name: GROUP_ID
-      - in: query
-        name: limit
-        description: The maximum number of items to return in a page
-      - in: query
-        name: offset
-        description: The item at which to begin the response
-      responses:
-        200:
-          description: OK
-      tags:
-      - Documents
-      - Groups
-      - Group
-      - ""
-      - Collaborations
+x-streamrank:
+  polling_total_time_average: 0
+  polling_size_download_average: 0
+  streaming_total_time_average: 0
+  streaming_size_download_average: 0
+  change_yes: 0
+  change_no: 0
+  time_percentage: 0
+  size_percentage: 0
+  change_percentage: 0
+  last_run: ""
+  days_run: 0
+  minute_run: 0
+---

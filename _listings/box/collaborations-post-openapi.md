@@ -3,9 +3,11 @@ swagger: "2.0"
 x-collection-name: Box
 x-complete: 0
 info:
-  title: Box Get Folder Collaborations
-  description: Use this to get a list of all the collaborations on a folder i.e. all
-    of the users that have access to that folder.
+  title: Box Create Collaboration
+  description: Used to add a collaboration for a single user or a single group to
+    a folder. Either an email address, a user ID, or a group id can be used to create
+    the collaboration. If the collaboration is being created with a group, access
+    to this endpoint is granted based on the group's invitability_level.
   version: 1.0.0
 host: api.box.com
 basePath: /2.0
@@ -70,6 +72,44 @@ paths:
       - Folders
       - Folder
       - ""
+      - Collaborations
+  /collaborations:
+    get:
+      summary: Pending Collaborations
+      description: Used to retrieve all pending collaboration invites for this user.
+      operationId: getPendingCollaborations
+      x-api-path-slug: collaborations-get
+      parameters:
+      - in: query
+        name: fields
+        description: Attribute(s) to include in the response
+      - in: query
+        name: status
+        description: Must be pending
+      responses:
+        200:
+          description: OK
+      tags:
+      - Documents
+      - Collaborations
+    post:
+      summary: Create Collaboration
+      description: Used to add a collaboration for a single user or a single group
+        to a folder. Either an email address, a user ID, or a group id can be used
+        to create the collaboration. If the collaboration is being created with a
+        group, access to this endpoint is granted based on the group's invitability_level.
+      operationId: createCollaboration
+      x-api-path-slug: collaborations-post
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/holder'
+      responses:
+        200:
+          description: OK
+      tags:
+      - Documents
       - Collaborations
 x-streamrank:
   polling_total_time_average: 0

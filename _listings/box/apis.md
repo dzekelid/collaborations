@@ -7,8 +7,8 @@ image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jp
 x-kinRank: "9"
 x-alexaRank: "445"
 tags: Collaborations
-created: "2018-08-25"
-modified: "2018-08-25"
+created: "2018-08-27"
+modified: "2018-08-27"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/collaborations/master/_listings/box/apis.md
 specificationVersion: "0.14"
 apis:
@@ -55,6 +55,21 @@ apis:
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/collaborations/master/_listings/box/collaborations-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/collaborations/master/_listings/box/collaborations-get-openapi.md
+- name: Box - Create Collaboration
+  x-api-slug: collaborations-post
+  description: Used to add a collaboration for a single user or a single group to
+    a folder. Either an email address, a user ID, or a group id can be used to create
+    the collaboration. If the collaboration is being created with a group, access
+    to this endpoint is granted based on the group's invitability_level.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
+  humanURL: http://box.com
+  baseURL: https://api.box.com//2.0
+  tags: Files, Collaboration, Sharing, Storage, Storage, Stack Network, Stack, Productivity,
+    SaaS, Technology, Enterprise, API Provider, Profiles, Publish, Service API, Relative
+    Data, Relative StreamRank, Streams, Backups
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/collaborations/master/_listings/box/collaborations-post-openapi.md
 - name: Box - Get Collaboration
   x-api-slug: collaborationscollab-id-get
   description: Used to get information about a single collaboration. All collaborations
@@ -71,6 +86,19 @@ apis:
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/collaborations/master/_listings/box/collaborationscollab-id-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/collaborations/master/_listings/box/collaborationscollab-id-get-openapi.md
+- name: Box - Update Collaboration
+  x-api-slug: collaborationscollab-id-put
+  description: Used to edit an existing collaboration. Descriptions of the various
+    roles can be found here.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/162-box.jpg
+  humanURL: http://box.com
+  baseURL: https://api.box.com//2.0
+  tags: Files, Collaboration, Sharing, Storage, Storage, Stack Network, Stack, Productivity,
+    SaaS, Technology, Enterprise, API Provider, Profiles, Publish, Service API, Relative
+    Data, Relative StreamRank, Streams, Backups
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/collaborations/master/_listings/box/collaborationscollab-id-put-openapi.md
 - name: Box - Delete Collaboration
   x-api-slug: collaborationscollab-id-delete
   description: Used to delete a single collaboration.
